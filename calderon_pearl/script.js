@@ -41,7 +41,8 @@ function addComment(event) {
     document.querySelector('#comment_button').disabled = true;
 
     const comments = JSON.parse(localStorage.getItem('comments')) || [];
-    comments.push({ name: onAddName, message: onAddMessage, date: formattedDate });
+    comments.push
+        ({ name: onAddName, message: onAddMessage, date: formattedDate });
     localStorage.setItem('comments', JSON.stringify(comments));
 }
 
@@ -63,7 +64,8 @@ window.onload = function () {
         deleteButton.onclick = function () {
             const index = newRow.rowIndex - 1; 
             tbody.deleteRow(index);
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const comments = JSON.parse
+                (localStorage.getItem('comments')) || [];
             comments.splice(index, 1);
             localStorage.setItem('comments', JSON.stringify(comments));
         };
@@ -129,10 +131,12 @@ function sortTable(ascending) {
     });
 }
 
-document.querySelector('#sort-ascending').addEventListener('click', function () {
+document.querySelector('#sort-ascending').
+    addEventListener('click', function () {
 sortTable(true);
 });
 
-document.querySelector('#sort-descending').addEventListener('click', function () {
+document.querySelector('#sort-descending').
+    addEventListener('click', function () {
 sortTable(false);
 });

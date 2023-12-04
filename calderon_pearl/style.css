@@ -118,7 +118,8 @@ h2 {
     transition: transform ease 0.5s;
 }
 
-.interest-one:hover, .interest-two:hover, .interest-three:hover, .interest-four:hover, .interest-five:hover {
+.interest-one:hover, .interest-two:hover, .interest-three:hover,
+     .interest-four:hover, .interest-five:hover {
     transform: translateY(-30px);
 }
 
