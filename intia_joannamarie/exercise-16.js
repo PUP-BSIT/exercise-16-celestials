@@ -56,4 +56,4 @@ countryButton.addEventListener('click', function() {
             }
         });
     });
-});
+}); 
