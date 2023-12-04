@@ -2,7 +2,8 @@ let searchBtn = document.querySelector('#search_btn');
 
 searchBtn.addEventListener('click', function() {
     let countryInput = document.querySelector('#country_input').value.trim();
-    let apiURL = `https://restcountries.com/v3.1/name/${countryInput}?fullText=true`;
+    let apiURL = 
+    `https://restcountries.com/v3.1/name/${countryInput}?fullText=true`;
 
     fetch(apiURL)
     .then((response) => response.json())
@@ -28,9 +29,7 @@ searchBtn.addEventListener('click', function() {
                 .currencies[Object.keys(data[0].currencies)[0]]
                 .name}</p>
             `;
-
             return data;
-            
     })
     .then((data) => {
         let region = `https://restcountries.com/v3.1/region/${data[0].region}`;
@@ -50,7 +49,6 @@ searchBtn.addEventListener('click', function() {
 
                 otherCountries.appendChild(newCountry);
             }
-            
         });
     });
 });
