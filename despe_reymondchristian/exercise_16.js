@@ -29,9 +29,7 @@ searchBtn.addEventListener('click', function() {
                 .currencies[Object.keys(data[0].currencies)[0]]
                 .name}</p>
             `;
-
-            return data;
-            
+            return data;       
     })
     .then((data) => {
         let region = `https://restcountries.com/v3.1/region/${data[0].region}`;
@@ -51,7 +49,6 @@ searchBtn.addEventListener('click', function() {
 
                 otherCountries.appendChild(newCountry);
             }
-            
         });
     });
 });
