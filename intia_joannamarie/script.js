@@ -46,7 +46,8 @@ function displayComments() {
 
     comments.forEach(commentData => {
         const commentElement = document.createElement('p');
-        commentElement.textContent = `${commentData.name}: ${commentData.message}`;
+        commentElement.textContent = 
+            `${commentData.name}: ${commentData.message}`;
         commentSection.appendChild(commentElement);
     });
 }
