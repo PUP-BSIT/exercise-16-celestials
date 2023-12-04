@@ -23,7 +23,7 @@ function addComment() {
     const newComment = {
         name: onInputName,
         message: onInputMessage,
-        timestamp: new Date().getTime() // Adding a timestamp
+        timestamp: new Date().getTime() 
     };
 
     existingComments.push(newComment);
@@ -70,4 +70,3 @@ document.addEventListener('DOMContentLoaded', function () {
         displayComments(commentSection, sortOrder);
     });
 });
-
